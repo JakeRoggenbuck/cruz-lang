@@ -12,4 +12,4 @@ Ptr (4 byte)
 ```
 
 Here is the syntax:
-![syntax of cruz lang](https://raw.githubusercontent.com/JakeRoggenbuck/cruz-lang/master/examples/syntax_example.png)
+![syntax of cruz lang](https://raw.githubusercontent.com/JakeRoggenbuck/cruz-lang/master/examples/syntax_example.png =435x177)
