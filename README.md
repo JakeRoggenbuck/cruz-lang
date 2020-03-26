@@ -1,6 +1,7 @@
 # cruz-lang
 
 Cruz Lang is a simple explicit static typed language
+The compiler is called surf
 It has 5 primitive data types:
 ```
 Byte (1 char)
