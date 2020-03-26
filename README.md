@@ -1,7 +1,7 @@
 # cruz-lang
 
 Cruz Lang is a simple explicit static typed language
-It has 5 very simple data types:
+It has 5 primitive data types:
 ```
 Byte (1 char)
 Char (1 byte)
