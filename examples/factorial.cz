@@ -1,5 +1,5 @@
 ~ Factorial function ~
-func factorial (int x) -> int {
+fun factorial (int x) -> int {
         int counter = result = 1
         ~ Multiply result by everything from 1 to couinter ~
         while (counter++ < x) {
