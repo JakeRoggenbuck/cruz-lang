@@ -10,3 +10,6 @@ Int (2 bytes)
 Prec (4 bytes) 
 Ptr (4 byte)
 ```
+
+Here is the syntax:
+![syntax of cruz lang](https://raw.githubusercontent.com/JakeRoggenbuck/cruz-lang/blob/master/examples/syntax_example.png)
