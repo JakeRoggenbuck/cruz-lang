@@ -15,7 +15,8 @@ It has 5 primitive data types:
 - `fun` the function key word
 - `while` a while loop
 - `return` a return
-- `out` output as stdout
+- `write` output as stdout
+- `read` input as stdin
 
 Here is the syntax:<br>
 <img src="https://raw.githubusercontent.com/JakeRoggenbuck/cruz-lang/master/examples/syntax_example.png" alt="syntax of cruz lang" width="500"/>
