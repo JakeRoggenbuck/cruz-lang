@@ -11,7 +11,7 @@ It has 5 primitive data types:
 - `prec` a number with a decimal point of 4 bytes
 - `ptr` a 4 byte pointer address
 
-### Other
+### Other key words
 - `fun` the function key word
 - `while` a while loop
 - `return` a return
