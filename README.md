@@ -11,5 +11,5 @@ Prec (4 bytes)
 Ptr (4 byte)
 ```
 
-Here is the syntax:
+Here is the syntax:<br>
 <img src="https://raw.githubusercontent.com/JakeRoggenbuck/cruz-lang/master/examples/syntax_example.png" alt="syntax of cruz lang" width="435"/>
