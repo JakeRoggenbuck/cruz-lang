@@ -11,4 +11,4 @@
 - `return` a return
 - `write` output as stdout
 - `read` input as stdin
-
+- `import` imports external files
