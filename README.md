@@ -17,7 +17,7 @@ It has 5 primitive data types:
 - `return` a return
 - `write` output as stdout
 - `read` input as stdin
-- `import` imports external files
+- `with` uses external files
 
 Here is the syntax:<br>
 <img src="https://raw.githubusercontent.com/JakeRoggenbuck/cruz-lang/master/examples/syntax_example.png" alt="syntax of cruz lang" width="500"/>
