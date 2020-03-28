@@ -1,0 +1,61 @@
+﻿Cruz is a high-level, statically strongly typed, and compiled language that offers low-level facilities and has a syntax broadly inspired by C and its descendants.
+
+
+OFFICIAL HIGHLIGHTING FOR WRITING CODE HERE:
+* Control flow words (if, else, for, while, break, etc.) are green
+* Built-in variable types are purple
+* When defined for the first time, variables and functions are orange
+* Dark blue is for struct, function, member
+* Comments are gray
+
+
+Aight let’s write some code
+
+
+IF:
+if (condition) {
+        code
+} elif (other condition) {
+        more code
+} else {
+        yet more code
+}
+
+
+WHILE:
+while (condition) {
+        code
+}
+
+
+FUNCTIONS:
+~ function foo (takes int age, int height) returns string {
+        return(“your age is ” + string(age) + “and your height is ” + string(height))
+} ~
+function foo takes (int age, int height) returns string {
+        return(“your age is ” + string(age) + “, and your height is ” + string(height))
+}
+~ function foo (takes int age, int height returns string) {
+        return(“your age is ” + string(age) + “and your height is ” + string(height))
+} ~
+
+
+foo(10, 20, 150)
+EXPONS:
+if (age is 10) {
+        write(“Happy Birthday!”)
+}
+
+
+read(“What’s your age?”)
+
+
+write(“What’s your age?”)
+int age = read()
+
+Data types
+* byte 8 bits of data
+* char one ASCII character
+* int a 32 bit integer
+* prec a number with a decimal point of 32 bits
+* ptr a 4 byte pointer address
