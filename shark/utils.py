@@ -62,3 +62,6 @@ def find_matching_close(code_string, position):
 
 # Should (and does) output 3.
 print(find_matching_close('()[]', 2))
+
+# Should (and does) output an error
+print(find_matching_close('()[]', 1))
