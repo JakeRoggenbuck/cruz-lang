@@ -1,8 +1,0 @@
-~Declare the function~
-fun hello() {
-	~Write to console~
-	sys.write("Hello world")
-}
-
-~Call function~
-hello()

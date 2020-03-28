@@ -1,9 +1,0 @@
-~ Factorial function ~
-fun factorial (int x) -> int {
-        int counter = result = 1
-        ~ Multiply result by everything from 1 to counter ~
-        while (counter++ < x) {
-                result *= counter
-        }
-        return(result)
-}
