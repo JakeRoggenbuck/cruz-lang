@@ -1,6 +1,13 @@
-int a = sys.read("Number: ")
-int b = sys.read("Number: ")
+~Prompt "First number: " to and set input a~
+int a = sys.read("First number: ")
+~Prompt "Second number:" to and set input b~
+int b = sys.read("Second number: ")
 
-fun add(a, b) {
+~Define add function~
+fun add(a, b){
+	~Writes the sum of a and b to console as stdout~
 	sys.write(a + b)
 }
+
+~Call add function~
+add()
