@@ -1,5 +1,3 @@
-with sys
-
 fun hello() {
 	sys.write("Hello world")
 }
