@@ -1,0 +1,8 @@
+with sys
+
+int a = sys.read("Number: ")
+int b = sys.read("Number: ")
+
+fun add (a, b) {
+	sys.write(a + b)
+}
