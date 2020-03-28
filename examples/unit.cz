@@ -1,0 +1,11 @@
+~ Declares a Unit struct ~
+
+~ The three arguments called by the constructor~
+struct Unit(int h, int a, int d) {
+	member int health = h
+	member int attack = a
+	member int defense = d
+}
+
+Unit warrior = Unit(10, 3, 1)
+
