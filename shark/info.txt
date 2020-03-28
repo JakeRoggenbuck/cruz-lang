@@ -1,0 +1,2 @@
+shark is the Cruz compiler written in Python.
+This will later be used to compile surf into machine code.
