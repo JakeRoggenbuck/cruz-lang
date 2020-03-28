@@ -5,9 +5,9 @@ int b = sys.read("Second number: ")
 
 ~Define add function~
 fun add(fnum, snum){
-	~Writes the sum of a and b to console as stdout~
+	~Writes the sum of fnum and snum to console as stdout~
 	sys.write(fnum + snum)
 }
 
-~Call add function~
+~Call add function with a and b as parameters~
 add(a, b)
