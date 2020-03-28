@@ -1,2 +1,3 @@
-shark is the Cruz compiler written in Python.
-This will later be used to compile surf into machine code.
+Shark is the Cruz compiler written in Python.
+Shark will compile Cruz into an intermediate representation and then machine language.
+This will later be used to compile Surf (the compiler writen in Cruz) into an machine language.
