@@ -1,0 +1,22 @@
+~ Declares a factorial operator ~
+
+~ Notice the string interpolation apparent. ~
+operator("{x}!", int x) -> prec {
+	if (x < 0) {
+		throw("Error: {x} < 0")
+	~ Notice the keyword "is" here.  ~
+	} elif (x is 0) {
+		return(1)
+	} else {
+		int result = 1
+		while (int i = 1; i++ < x+1) {
+			result *= i
+		}
+		return(result)
+	}
+}
+
+~ Using the operator defined above ~
+int x = 5
+sys.write(x!)
+
