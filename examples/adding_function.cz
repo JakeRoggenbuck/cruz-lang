@@ -4,10 +4,10 @@ int a = sys.read("First number: ")
 int b = sys.read("Second number: ")
 
 ~Define add function~
-fun add(a, b){
+fun add(fnum, snum){
 	~Writes the sum of a and b to console as stdout~
-	sys.write(a + b)
+	sys.write(fnum + snum)
 }
 
 ~Call add function~
-add()
+add(a, b)
