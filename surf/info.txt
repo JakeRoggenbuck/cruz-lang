@@ -1,0 +1,2 @@
+Surf is the Cruz compiler written in Cruz.
+This compiler will be compiled by Shark (the compiler written in python).
