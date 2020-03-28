@@ -1,6 +1,6 @@
 ~ Declares a factorial operator ~
 
-~ Notice the string interpolation apparent.
+~ Notice the string interpolation apparent. ~
 operator("{x}!", int x) -> prec {
 	if (x < 0) {
 		throw("Error: {x} < 0")
