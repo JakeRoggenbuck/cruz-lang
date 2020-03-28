@@ -1,5 +1,5 @@
 with sys
 
-fun hello () {
+fun hello() {
 	sys.write("Hello world")
 }
