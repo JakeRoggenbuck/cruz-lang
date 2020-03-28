@@ -1,7 +1,7 @@
 ~Prompt "First number: " to and set input a~
-int a = sys.read("First number: ")
+int a = sys.read(int("First number: "))
 ~Prompt "Second number:" to and set input b~
-int b = sys.read("Second number: ")
+int b = sys.read(int("Second number: "))
 
 ~Define add function~
 fun add(int fnum, int snum) -> int {	
