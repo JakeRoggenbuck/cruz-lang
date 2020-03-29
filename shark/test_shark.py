@@ -1,9 +1,9 @@
 import unittest
 
 class testShark (unittest.TestCase):
-    pass
-    def test_parse(self):
+    def test_file_read_class(self):
         import shark
+        file_ = shark.ReadFile
 
 
 if __name__ == "__main__":
