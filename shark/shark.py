@@ -2,5 +2,6 @@ class ReadFile():
     pass
 
     def read(self, fileName):
-        return {'file', 'main.cz'}
+        with open(fileName) as f:
+            return f.name
 
