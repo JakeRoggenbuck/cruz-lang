@@ -1,14 +1,6 @@
-
-
-# ------------------------------------------------------------
-# calclex.py
-#
-# tokenizer for a simple expression evaluator for
-# numbers and +,-,*,/
-# ------------------------------------------------------------
 import ply.lex as lex
 
-# List of token names.   This is always required
+# List of token names.
 tokens = (
     'PLUS',
     'NUMBER',
