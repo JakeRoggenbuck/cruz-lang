@@ -47,6 +47,8 @@ t_RPAREN = r'\)'
 t_LCBRACK = r'\{'
 t_RCBRACK = r'\}'
 
+lexer = lex.lex()
+
 # A regular expression rule with some action code
 def t_NUMBER(t):
     r'\d+'
@@ -66,35 +68,13 @@ def t_error(t):
     print("Illegal character '%s'" % t.value[0])
     t.lexer.skip(1)
 
-# Build the lexer
-lexer = lex.lex()
+def parlex(data):
+    # Give the lexer some input
+    lexer.input(data)
 
-
-# Test it out
-data = '''
-if () {
-    write() 
-} elif () {
-        write()
-} else {
-        write()
-}
-
-while () {
-        write()
-}
-
-function takes (int int) returns int {
-        return()
-}
-'''
-
-# Give the lexer some input
-lexer.input(data)
-
-# Tokenize
-while True:
-    tok = lexer.token()
-    if not tok: 
-        break      # No more input
-    print(tok)
+    # Tokenize
+    while True:
+        tok = lexer.token()
+        if not tok: 
+            break      # No more input
+        print(tok)

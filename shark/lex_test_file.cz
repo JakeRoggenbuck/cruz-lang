@@ -1,0 +1,15 @@
+if () {
+    write()
+} elif () {
+        write()
+} else {
+        write()
+}
+
+while () {
+        write()
+}
+
+function takes (int int) returns int {
+        return()
+}
