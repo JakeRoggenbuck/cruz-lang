@@ -1,4 +1,4 @@
- import ply.lex as lex
+import ply.lex as lex
 
 
 tokens = (
@@ -45,3 +45,42 @@ t_RPAREN = r'\)'
 t_LCBRACK = r'\{'
 t_RCBRACK = r'\}'
 t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
+
+lexer = lex.lex()
+
+# Define a rule so we can track line numbers
+def t_newline(t):
+    r'\n+'
+    t.lexer.lineno += len(t.value)
+
+# A string containing ignored characters (spaces and tabs)
+t_ignore  = ' \t'
+
+# Error handling rule
+def t_error(t):
+    print("Illegal character '%s'" % t.value[0])
+    t.lexer.skip(1)
+     
+# Test it out
+data = '''
+if (condition) {
+        code
+} elif (othercondition) {
+        morecode
+} else {
+        yetmorecode
+}
+while (condition) {
+        code
+}
+'''
+ 
+# Give the lexer some input
+lexer.input(data)
+
+# Tokenize
+while True:
+    tok = lexer.token()
+    if not tok: 
+        break      # No more input
+    print(tok)
