@@ -1,7 +1,9 @@
 import ply.lex as lex
 
-
+# List of token names.
 tokens = (
+    'PLUS',
+    'NUMBER',
     'IF',
     'ELIF',
     'ELSE',
@@ -21,10 +23,10 @@ tokens = (
     'RPAREN',
     'LCBRACK',
     'RCBRACK',
-    'NAME',
 )
 
-
+# Regular expression rules for simple tokens
+t_PLUS = r'\+'
 t_IF = r'if'
 t_ELIF = r'elif'
 t_ELSE = r'else'
@@ -37,16 +39,19 @@ t_CHAR = r'char'
 t_INT = r'int'
 t_PREC = r'prec'
 t_PTR = r'ptr'
-t_TAKES = r'takes',
-t_RETURN = r'return',
-t_RETURNS = r'returns',
+t_TAKES = r'takes'
+t_RETURN = r'return'
+t_RETURNS = r'returns'
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_LCBRACK = r'\{'
 t_RCBRACK = r'\}'
-t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
 
-lexer = lex.lex()
+# A regular expression rule with some action code
+def t_NUMBER(t):
+    r'\d+'
+    t.value = int(t.value)    
+    return t
 
 # Define a rule so we can track line numbers
 def t_newline(t):
@@ -60,21 +65,30 @@ t_ignore  = ' \t'
 def t_error(t):
     print("Illegal character '%s'" % t.value[0])
     t.lexer.skip(1)
-     
+
+# Build the lexer
+lexer = lex.lex()
+
+
 # Test it out
 data = '''
-if (condition) {
-        code
-} elif (othercondition) {
-        morecode
+if () {
+    write() 
+} elif () {
+        write()
 } else {
-        yetmorecode
+        write()
 }
-while (condition) {
-        code
+
+while () {
+        write()
+}
+
+function takes (int int) returns int {
+        return()
 }
 '''
- 
+
 # Give the lexer some input
 lexer.input(data)
 
