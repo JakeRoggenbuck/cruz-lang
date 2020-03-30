@@ -25,4 +25,4 @@ It has 5 primitive data types:
 - `returns` tells function what type to return
 
 Here is the syntax:<br>
-[a link](https://github.com/JakeRoggenbuck/cruz-lang/blob/master/cruz_syntax.txt)
+[Syntax](https://github.com/JakeRoggenbuck/cruz-lang/blob/master/cruz_syntax.txt)
