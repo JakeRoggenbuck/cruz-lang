@@ -1,7 +1,17 @@
+
+
+# ------------------------------------------------------------
+# calclex.py
+#
+# tokenizer for a simple expression evaluator for
+# numbers and +,-,*,/
+# ------------------------------------------------------------
 import ply.lex as lex
 
-
+# List of token names.   This is always required
 tokens = (
+    'PLUS',
+    'NUMBER',
     'IF',
     'ELIF',
     'ELSE',
@@ -24,7 +34,8 @@ tokens = (
     'NAME',
 )
 
-
+# Regular expression rules for simple tokens
+t_PLUS = r'\+'
 t_IF = r'if'
 t_ELIF = r'elif'
 t_ELSE = r'else'
@@ -37,16 +48,20 @@ t_CHAR = r'char'
 t_INT = r'int'
 t_PREC = r'prec'
 t_PTR = r'ptr'
-t_TAKES = r'takes',
-t_RETURN = r'return',
-t_RETURNS = r'returns',
+t_TAKES = r'takes'
+t_RETURN = r'return'
+t_RETURNS = r'returns'
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_LCBRACK = r'\{'
 t_RCBRACK = r'\}'
 t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
 
-lexer = lex.lex()
+# A regular expression rule with some action code
+def t_NUMBER(t):
+    r'\d+'
+    t.value = int(t.value)    
+    return t
 
 # Define a rule so we can track line numbers
 def t_newline(t):
@@ -60,21 +75,30 @@ t_ignore  = ' \t'
 def t_error(t):
     print("Illegal character '%s'" % t.value[0])
     t.lexer.skip(1)
-     
+
+# Build the lexer
+lexer = lex.lex()
+
+
 # Test it out
 data = '''
 if (condition) {
         code
-} elif (othercondition) {
-        morecode
+} elif (other condition) {
+        more code
 } else {
-        yetmorecode
+        yet more code
 }
+
 while (condition) {
         code
 }
+
+function foo takes (int age, int height) returns int {
+        return(age + height)
+}
 '''
- 
+
 # Give the lexer some input
 lexer.input(data)
 
