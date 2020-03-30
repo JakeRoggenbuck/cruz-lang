@@ -10,7 +10,7 @@ while () {
         write()
 }
 
-function takes (int int) returns int {
+fun takes (int int) returns int {
         return()
 }
 
