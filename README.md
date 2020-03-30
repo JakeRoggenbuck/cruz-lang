@@ -1,7 +1,7 @@
 # Cruzlang
 
 Cruz Lang is a simple explicit static typed language. <br>
-The compiler is called surf. <br>
+The compiler written in python is called shark and uses ply.lex for lexical analysis. <br>
 It has 5 primitive data types:
 
 ### Data types
@@ -14,10 +14,15 @@ It has 5 primitive data types:
 ### Other key words
 - `fun` the function key word
 - `while` a while loop
-- `return` a return
 - `write` output as stdout
 - `read` input as stdin
 - `with` uses external files
+- `if` do something if condition true
+- `elif` else do something if condition true
+- `else` else do something
+- `takes` place for parameters and types
+- `return` a return
+- `returns` tells function what type to return
 
 Here is the syntax:<br>
-<img src="https://raw.githubusercontent.com/JakeRoggenbuck/cruz-lang/master/examples/syntax_example.png" alt="syntax of cruz lang" width="500"/>
+[a link](https://github.com/JakeRoggenbuck/cruz-lang/blob/master/cruz_syntax.txt)
