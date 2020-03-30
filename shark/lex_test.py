@@ -23,7 +23,6 @@ tokens = (
     'RPAREN',
     'LCBRACK',
     'RCBRACK',
-    'NAME',
 )
 
 # Regular expression rules for simple tokens
@@ -47,7 +46,6 @@ t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_LCBRACK = r'\{'
 t_RCBRACK = r'\}'
-t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
 
 # A regular expression rule with some action code
 def t_NUMBER(t):
@@ -74,20 +72,20 @@ lexer = lex.lex()
 
 # Test it out
 data = '''
-if (condition) {
-        code
-} elif (other condition) {
-        more code
+if () {
+    write() 
+} elif () {
+        write()
 } else {
-        yet more code
+        write()
 }
 
-while (condition) {
-        code
+while () {
+        write()
 }
 
-function foo takes (int age, int height) returns int {
-        return(age + height)
+function takes (int int) returns int {
+        return()
 }
 '''
 
