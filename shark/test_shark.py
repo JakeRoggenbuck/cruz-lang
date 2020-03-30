@@ -19,9 +19,9 @@ class testShark(unittest.TestCase):
         ]
 
         textList = [
-            'yeet',
-            'lol',
-            'hello world'
+            ['yeet\n'],
+            ['lol\n'],
+            ['hello world\n','hey\n']
         ]
         for x in range(len(textList)):
             result = parser.read(f'testFiles/{files[x]}')
