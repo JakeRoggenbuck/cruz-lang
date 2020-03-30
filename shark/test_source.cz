@@ -1,0 +1,15 @@
+if (condition) {
+        code
+} elif (other condition) {
+        more code
+} else {
+        yet more code
+}
+
+while (condition) {
+        code
+}
+
+function foo takes (int age, int height) returns int {
+        return(age + height)
+}
