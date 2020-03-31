@@ -9,13 +9,19 @@ tokens = (
     'ELSE',
     'WHILE',
     'FUNCTION',
+    'FUNCTION_NAME',
     'WRITE',
     'READ',
     'BYTE',
+    'BYTE_VAR',
     'CHAR',
+    'CHAR_VAR',
     'INT',
+    'INT_VAR',
     'PREC',
+    'PREC_VAR',
     'PTR',
+    'PTR_VAR',
     'TAKES',
     'RETURN',
     'RETURNS',
@@ -32,13 +38,19 @@ t_ELIF = r'elif'
 t_ELSE = r'else'
 t_WHILE = r'while'
 t_FUNCTION = r'fun'
+t_FUNCTION_NAME = f'{t_FUNCTION} [a-zA-z0-9_]* '
 t_WRITE = r'write'
 t_READ = r'read'
 t_BYTE = r'byte'
+t_BYTE_VAR = f'{t_BYTE} [a-zA-z0-9_]*'
 t_CHAR = r'char'
+t_CHAR_VAR = f'{t_CHAR} [a-zA-z0-9_]*'
 t_INT = r'int'
+t_INT_VAR = f'{t_INT} [a-zA-z0-9_]*'
 t_PREC = r'prec'
+t_PREC_VAR = f'{t_PREC} [a-zA-z0-9_]*'
 t_PTR = r'ptr'
+t_PTR_VAR = f'{t_PTR} [a-zA-z0-9_]*'
 t_TAKES = r'takes'
 t_RETURN = r'return'
 t_RETURNS = r'returns'

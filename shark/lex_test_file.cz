@@ -1,16 +1,20 @@
+int age
+
+prec pi
+
 if () {
     write()
 } elif () {
-        write()
+    write()
 } else {
-        write()
+    write()
 }
 
 while () {
-        write()
+    write()
 }
 
-fun takes (int int) returns int {
-        return()
+fun hey takes (int yes int no) returns int {
+    return()
 }
 
