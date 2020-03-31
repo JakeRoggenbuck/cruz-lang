@@ -8,25 +8,20 @@ tokens = (
     'RPAREN',
     'LCBRACK',
     'RCBRACK',
-    #'NAME',
+    'BYTE',
+    'CHAR',
+    'INT',
+    'PREC',
+    'PTR',
+    'VAR_NAME',
 )
 
-reserved = {
-    'if':'IF',
-    'elif':'ELIF',
-    'else':'ELSE',
-    'while':'WHILE',
-    'fun':'FUNCTION',
-    'write':'WRITE',
-    'read':'READ',
+data_types = {
     'byte':'BYTE',
     'char':'CHAR',
     'int':'INT',
     'prec':'PREC',
     'ptr':'PTR',
-    'takes':'TAKES',
-    'return':'RETURN',
-    'returns':'RETURNS'
 }
 
 def MyLexer():
@@ -36,8 +31,12 @@ def MyLexer():
     t_RPAREN = r'\)'
     t_LCBRACK = r'\{'
     t_RCBRACK = r'\}'
-    #t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
 
+
+    def t_DATA_TYPE_NAME(t):
+        r'[a-zA-Z_][a-zA-Z_0-9]*'
+        t.type = data_types.get(t.value,'VAR_NAME')    # Check for reserved words
+        return t
 
     # A regular expression rule with some action code
     def t_NUMBER(t):
