@@ -14,14 +14,28 @@ tokens = (
     'PREC',
     'PTR',
     'VAR_NAME',
+    'IF',
+    'ELIF',
+    'ELSE',
+    'WHILE',
+    'FUNCTION',
+    'WRITE',
+    'READ',
 )
 
-data_types = {
+reserved = {
     'byte':'BYTE',
     'char':'CHAR',
     'int':'INT',
     'prec':'PREC',
     'ptr':'PTR',
+    'function':'FUNCTION',
+    'if':'IF',
+    'elif':'ELIF',
+    'else':'ELSE',
+    'while':'WHILE',
+    'write':'WRITE',
+    'read':'READ',
 }
 
 def MyLexer():
@@ -35,7 +49,7 @@ def MyLexer():
 
     def t_DATA_TYPE_NAME(t):
         r'[a-zA-Z_][a-zA-Z_0-9]*'
-        t.type = data_types.get(t.value,'VAR_NAME')    # Check for reserved words
+        t.type = reserved.get(t.value,'VAR_NAME')    # Check for reserved words
         return t
 
     # A regular expression rule with some action code
