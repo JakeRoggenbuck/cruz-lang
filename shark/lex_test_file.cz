@@ -1,20 +1,20 @@
-int age
+int age = 5
 
-prec pi
+prec pi = 3
 
-if () {
-    write()
-} elif () {
-    write()
+if (age) {
+    write(age)
+} elif (pi) {
+    write(pi)
 } else {
-    write()
+    write(age + pi)
 }
 
-while () {
-    write()
+while (age) {
+    write(pi)
 }
 
-fun hey takes (int yes int no) returns int {
-    return()
+fun hey takes (int age int pi) returns int {
+    return(pi)
 }
 

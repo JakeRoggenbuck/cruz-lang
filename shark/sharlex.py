@@ -2,6 +2,7 @@ import ply.lex as lex
 
 # List of token names.
 tokens = (
+    'SET',
     'PLUS',
     'NUMBER',
     'LPAREN',
@@ -40,6 +41,7 @@ reserved = {
 
 def MyLexer():
     # Regular expression rules for simple tokens
+    t_SET = r'\='
     t_PLUS = r'\+'
     t_LPAREN = r'\('
     t_RPAREN = r'\)'
