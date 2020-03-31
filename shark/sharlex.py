@@ -25,7 +25,7 @@ tokens = (
     'RCBRACK',
 )
 
-def MyLexer(data):
+def MyLexer():
     # Regular expression rules for simple tokens
     t_PLUS = r'\+'
     t_IF = r'if'
@@ -47,6 +47,7 @@ def MyLexer(data):
     t_RPAREN = r'\)'
     t_LCBRACK = r'\{'
     t_RCBRACK = r'\}'
+
 
     # A regular expression rule with some action code
     def t_NUMBER(t):
