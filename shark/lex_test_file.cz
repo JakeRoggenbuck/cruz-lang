@@ -2,12 +2,24 @@ int age = 5
 
 prec pi = 3
 
-if (age) {
+if (age == pi) {
     write(age)
-} elif (pi) {
+} elif (pi != 5) {
     write(pi)
 } else {
     write(age + pi)
+}
+
+if (age > 4) {
+    write(4)
+} elif (age < 6) {
+    write(3)
+} elif (age <= 7) {
+    write(1)
+} elif (age >= 12) {
+    write(6)
+} else {
+    write(1)
 }
 
 while (age) {

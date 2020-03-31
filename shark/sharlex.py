@@ -3,6 +3,12 @@ import ply.lex as lex
 # List of token names.
 tokens = (
     'SET',
+    'EQUAL',
+    'NOT_EQUAL',
+    'LESS',
+    'GREATER',
+    'LESS_EQUAL',
+    'GREATER_EQUAL',
     'PLUS',
     'NUMBER',
     'LPAREN',
@@ -48,6 +54,12 @@ reserved = {
 def MyLexer():
     # Regular expression rules for simple tokens
     t_SET = r'\='
+    t_EQUAL = r'\=='
+    t_NOT_EQUAL = r'\!='
+    t_LESS = r'\<'
+    t_GREATER = r'\>'
+    t_LESS_EQUAL = r'\<='
+    t_GREATER_EQUAL = r'\>='
     t_PLUS = r'\+'
     t_LPAREN = r'\('
     t_RPAREN = r'\)'
