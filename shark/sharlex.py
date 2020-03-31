@@ -4,49 +4,39 @@ import ply.lex as lex
 tokens = (
     'PLUS',
     'NUMBER',
-    'IF',
-    'ELIF',
-    'ELSE',
-    'WHILE',
-    'FUNCTION',
-    'WRITE',
-    'READ',
-    'BYTE',
-    'CHAR',
-    'INT',
-    'PREC',
-    'PTR',
-    'TAKES',
-    'RETURN',
-    'RETURNS',
     'LPAREN',
     'RPAREN',
     'LCBRACK',
     'RCBRACK',
+    #'NAME',
 )
+
+reserved = {
+    'if':'IF',
+    'elif':'ELIF',
+    'else':'ELSE',
+    'while':'WHILE',
+    'fun':'FUNCTION',
+    'write':'WRITE',
+    'read':'READ',
+    'byte':'BYTE',
+    'char':'CHAR',
+    'int':'INT',
+    'prec':'PREC',
+    'ptr':'PTR',
+    'takes':'TAKES',
+    'return':'RETURN',
+    'returns':'RETURNS'
+}
 
 def MyLexer():
     # Regular expression rules for simple tokens
     t_PLUS = r'\+'
-    t_IF = r'if'
-    t_ELIF = r'elif'
-    t_ELSE = r'else'
-    t_WHILE = r'while'
-    t_FUNCTION = r'fun'
-    t_WRITE = r'write'
-    t_READ = r'read'
-    t_BYTE = r'byte'
-    t_CHAR = r'char'
-    t_INT = r'int'
-    t_PREC = r'prec'
-    t_PTR = r'ptr'
-    t_TAKES = r'takes'
-    t_RETURN = r'return'
-    t_RETURNS = r'returns'
     t_LPAREN = r'\('
     t_RPAREN = r'\)'
     t_LCBRACK = r'\{'
     t_RCBRACK = r'\}'
+    #t_NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
 
 
     # A regular expression rule with some action code
