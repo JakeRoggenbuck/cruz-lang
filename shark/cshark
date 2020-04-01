@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import sys
 import sharlex
 
 def read(fileName):
@@ -6,13 +8,12 @@ def read(fileName):
         lines += f.readlines()
         return lines
 
-file_ = read('lex_test_file.cz')
+file_ = read(sys.argv[1])
 data = """{}""".format("".join(file_[0:]))
 lexed = sharlex.MyLexer()
 
 lexed.input(data)
 
-# Tokenize
 while True:
     tok = lexed.token()
     if not tok: 
