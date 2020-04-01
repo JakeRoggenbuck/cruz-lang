@@ -33,6 +33,7 @@ tokens = (
     'READ',
 )
 
+# Defines reserved words
 reserved = {
     'byte':'BYTE',
     'char':'CHAR',

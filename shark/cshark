@@ -2,20 +2,31 @@
 import sys
 import sharlex
 
+
 def read(fileName):
+    '''Read file and return lines of file'''
     with open(fileName) as f:
         lines = []
         lines += f.readlines()
         return lines
 
-file_ = read(sys.argv[1])
-data = """{}""".format("".join(file_[0:]))
-lexed = sharlex.MyLexer()
 
-lexed.input(data)
+def lexFun():
+    '''Pass file name from args to read function, then add it to string.
+    Then pass file data to MyLexer and print tokens.'''
+    # Gets file name form sys.args amd passes to read()
+    file_ = read(sys.argv[1])
+    # Joins file_ lines to string as data
+    data = """{}""".format("".join(file_[0:]))
+    lexed = sharlex.MyLexer()
+    # Gives data to lex funtion in sharlex
+    lexed.input(data)
+    # Prints tokens from lexed.token() 
+    while True:
+        tok = lexed.token()
+        if not tok: 
+            break
+        print(tok)
 
-while True:
-    tok = lexed.token()
-    if not tok: 
-        break
-    print(tok)
+
+lexFun()
